@@ -5,7 +5,8 @@ import java.util.Map;
 
 import com.abel.example.bean.User;
 import io.swagger.annotations.*;
-import org.apache.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
+    private static Log logger = LogFactory.getLog(UserController.class);
     /**
      * 查询所有的用户
      * api :localhost:8099/users
@@ -48,6 +49,7 @@ public class UserController {
     @ResponseBody
     @ApiOperation(value = "通过id获取用户信息", notes="返回用户信息")
     public ResponseEntity<Object> getUserById(@PathVariable Integer id) {
+        logger.info("开始测试");
         return new ResponseEntity<>(userService.getUserById(Long.valueOf(id)), HttpStatus.OK);
     }
 
