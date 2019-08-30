@@ -23,11 +23,12 @@ import java.util.List;
 @Service
 public class CustomUserService implements UserDetailsService { //自定义UserDetailsService 接口
 
-    @Autowired
+    @Autowired(required = false)
     UserDao userDao;
-    @Autowired
+    @Autowired(required = false)
     PermissionDao permissionDao;
 
+    @Override
     public UserDetails loadUserByUsername(String username) {
         SysUser user = userDao.findByUserName(username);
         if (user != null) {
