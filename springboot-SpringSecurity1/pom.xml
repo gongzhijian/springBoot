@@ -36,10 +36,13 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity4 -->
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+            <version>3.0.0.RELEASE</version>
         </dependency>
+
         <!--db-->
         <dependency>
             <groupId>mysql</groupId>
@@ -76,10 +79,10 @@
 
 
     </dependencies>
-    <build>
+    <!--<build>
         <plugins>
 
-            <!--&lt;!&ndash;打依赖包&ndash;&gt;-->
+            &lt;!&ndash;&lt;!&ndash;打依赖包&ndash;&gt;&ndash;&gt;
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -94,5 +97,5 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
