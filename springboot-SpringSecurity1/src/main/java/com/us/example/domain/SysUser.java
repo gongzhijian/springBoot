@@ -1,14 +1,23 @@
 package com.us.example.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.List;
 
 /**
  * Created by yangyibo on 17/1/17.
  */
-
+@Table(name = "Sys_User")
 public class SysUser {
+    @Id
+    @Column(name = "id")
     private Integer id;
+
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
     private String password;
 
     private List<SysRole> roles;
